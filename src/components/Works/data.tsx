@@ -10,7 +10,7 @@ export type WorkType = {
 }
 
 const blog:WorkType = {
-    imgs: ["/works/blog/blog.jpeg","/works/blog/post.jpeg","/works/blog/post_2.jpeg","/works/blog/admin.jpeg","/works/blog/admin_2.jpeg"],
+    imgs: ["./works/blog/blog.jpeg","./works/blog/post.jpeg","./works/blog/post_2.jpeg","./works/blog/admin.jpeg","./works/blog/admin_2.jpeg"],
     title:["Personal Blog System","個人部落格"],
     tags : ["Next SSR","Supabase","OAuth","GCS"],
     github:"https://github.com/ZiJson/Blog",
@@ -18,7 +18,7 @@ const blog:WorkType = {
     position:"tl"
 }
 const chatroom:WorkType = {
-    imgs: ["/works/chatroom/chatroom.jpeg","/works/chatroom/home.jpeg"],
+    imgs: ["./works/chatroom/chatroom.jpeg","./works/chatroom/home.jpeg"],
     title:["Realtime chatroom","即時線上聊天室"],
     tags : ["WebSocket","Express","GraphQL","Antd"],
     github:"https://github.com/ZiJson/Realtime_Chatroom",
@@ -26,7 +26,7 @@ const chatroom:WorkType = {
     position:"tr"
 }
 const issue:WorkType = {
-    imgs: ["/works/issue_manager/main.jpeg","/works/issue_manager/create.jpeg","/works/issue_manager/create_2.jpeg","/works/issue_manager/home.jpeg","/works/issue_manager/list.jpeg"],
+    imgs: ["./works/issue_manager/main.jpeg","./works/issue_manager/create.jpeg","./works/issue_manager/create_2.jpeg","./works/issue_manager/home.jpeg","./works/issue_manager/list.jpeg"],
     title:["GitHub Issue Manager","專案管理"],
     tags : ["GitHub App","Express","GraphQL","Antd"],
     github:"https://github.com/ZiJson/github-issue-manager",
@@ -34,7 +34,7 @@ const issue:WorkType = {
     position:"bl"
 }
 const store:WorkType = {
-    imgs: ["/works/store/shop.jpeg"],
+    imgs: ["./works/store/shop.jpeg"],
     title:["Online Store","電商系統"],
     tags : ["Magento","Line API","PHP"],
     github:"",
