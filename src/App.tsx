@@ -16,7 +16,7 @@ function App() {
   return (
     <div ref={ref} className=' h-screen font-MyFont overflow-auto snap-y scroll-smooth'>
       <Navbar scrollY={scrollY}/>
-      <div className='fixed -top-10 right-0 w-screen -z-10 h-[60vh] overflow-hidden'>
+      <div className='fixed right-0 w-screen -z-10 h-[60vh] overflow-hidden'>
         <Head scrollY={scrollY}/>
       </div>
       <section id='top' className=' h-screen w-screen relative '>

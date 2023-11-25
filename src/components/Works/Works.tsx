@@ -107,7 +107,7 @@ export default function Works({scrollY}:props) {
                             style={{ width: card.width, height: card.height }}
                         >
                             <div>
-                                <Card images={work.imgs} isSelected={isSelected} />
+                                <Card imgFolder={work.folder} images={work.imgs} isSelected={isSelected} />
                                 {work.title.map((text) => (
                                     <div className=" font-medium text-[17px]">
                                         {text}

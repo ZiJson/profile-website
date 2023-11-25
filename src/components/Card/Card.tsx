@@ -5,18 +5,19 @@ import ArrowRight from "../Icon/ArrowRight"
 type props = {
     isSelected: boolean,
     images: string[]
-
+    imgFolder:string
 }
 
 
-export default function Card({ isSelected, images }: props) {
+export default function Card({ isSelected, images, imgFolder }: props) {
     const [imageIndex, setImageIndex] = useState(0)
-
-    useEffect(()=>{
-        if(!isSelected){
+    console.log(images[0] === "../../img/blog/blog.jpeg")
+    // let img = require(images[0])
+    useEffect(() => {
+        if (!isSelected) {
             setImageIndex(0)
         }
-    },[isSelected])
+    }, [isSelected])
 
     console.log(isSelected)
     const onArrowClick = () => {
@@ -30,12 +31,14 @@ export default function Card({ isSelected, images }: props) {
             <motion.img
                 animate={isSelected ? "expand" : "initial"}
                 variants={imgVariants}
-                src={images[imageIndex]}
+                src={require(`../../img/${imgFolder}/${images[imageIndex]}`)}
+                // src="./logo.512.png"
+                // src={require(`${images[imageIndex]}`)}
                 alt="blog"
                 className="z-10 bg-gray-300 w-full  object-contain mb-4 grayscale group-hover:grayscale-0"
             />
             {
-                isSelected && images.length>1?
+                isSelected && images.length > 1 ?
                     <div className="absolute right-0 text-[1.5rem] text-inherit hover:scale-105 hover:cursor-pointer" onClick={onArrowClick}>
                         <ArrowRight />
                     </div>
