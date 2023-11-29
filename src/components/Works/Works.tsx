@@ -86,13 +86,13 @@ export default function Works({scrollY}:props) {
     }
 
     return (
-        <div className="container mx-auto px-20 pr-8 py-20 w-full h-full flex justify-between items-center relative" onClick={onPageClick}>
+        <div className="container mx-auto px-20 pr-8 py-20 w-full h-full flex justify-between items-center relative flex-col lg:flex-row gap-20 lg:gap-0 " onClick={onPageClick}>
             <div>
                 <h1>開發作品</h1>
                 <p>為您精選四個過去的開發專案</p>
                 <p>點擊以查看更詳細內容</p>
             </div>
-            <div className=" grid grid-cols-2" style={{ width: container.width, height: container.height, columnGap: gap.y, rowGap: gap.x }}>
+            <div className=" grid grid-cols-1 lg:grid-cols-2 mx-auto mb-[680px] lg:mb-0" style={{ width: container.width, height: container.height, columnGap: gap.y, rowGap: gap.x }}>
                 {works.map((work, index) => {
                     const isSelected = work.position === motionState.selected;
                     return (

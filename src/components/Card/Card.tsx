@@ -21,7 +21,7 @@ export default function Card({ isSelected, images, imgFolder }: props) {
 
     console.log(isSelected)
     const onArrowClick = () => {
-        if (imageIndex == images.length - 1) {
+        if (imageIndex === images.length - 1) {
             setImageIndex(0)
         }
         else setImageIndex(pre => pre + 1)
@@ -29,13 +29,14 @@ export default function Card({ isSelected, images, imgFolder }: props) {
     return (
         <div className=" relative">
             <motion.img
-                animate={isSelected ? "expand" : "initial"}
+                initial="initail"
+                animate={isSelected ? "expand" : "unexpand"}
                 variants={imgVariants}
                 src={require(`../../img/${imgFolder}/${images[imageIndex]}`)}
                 // src="./logo.512.png"
                 // src={require(`${images[imageIndex]}`)}
                 alt="blog"
-                className="z-10 bg-gray-300 w-full  object-contain mb-4 grayscale group-hover:grayscale-0"
+                className="z-10 bg-gray-300 w-full object-contain mb-4 grayscale group-hover:grayscale-0"
             />
             {
                 isSelected && images.length > 1 ?
@@ -51,6 +52,9 @@ const delay = 0.3
 const imgVariants = {
     inital: {
         height: 128
+    },
+    unexpand: {
+        height:128
     },
     expand: {
         height: 300,

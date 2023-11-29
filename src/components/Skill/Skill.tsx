@@ -1,6 +1,6 @@
 export default function Skill() {
     return (
-        <div className="container mx-auto px-20 py-20 w-full h-full flex justify-between items-center">
+        <div className="container mx-auto lg:px-20 py-20 w-full h-full flex justify-between items-center flex-col lg:flex-row gap-20 lg:gap-0">
             <div>
                 <h1>專長 技能</h1>
                 <p>前端以<strong>React</strong>及原生js為主</p>
@@ -9,14 +9,15 @@ export default function Skill() {
                 <br />
                 <p>使用<strong>Typescript</strong>語法</p>
             </div>
-            <div className=" flex flex-col gap-[4rem] text-gray-500">
-                <div className=" flex gap-[8rem]"><div>
-                    <div className="text-2xl font-bold mb-4">前端技能</div>
-                    <div className="text-lg font-bold mb-1">React</div>
-                    <div className="text-lg font-bold mb-1">Next</div>
-                    <div className="text-lg font-bold mb-1">Antd</div>
-                    <div className="text-lg font-bold mb-1">Tailwind</div>
-                </div>
+            <div className="  flex flex-col gap-8 lg:gap-[4rem] text-gray-500">
+                <div className=" flex gap-20 lg:gap-[8rem]">
+                    <div>
+                        <div className="text-2xl font-bold mb-4">前端技能</div>
+                        <div className="text-lg font-bold mb-1">React</div>
+                        <div className="text-lg font-bold mb-1">Next</div>
+                        <div className="text-lg font-bold mb-1">Antd</div>
+                        <div className="text-lg font-bold mb-1">Tailwind</div>
+                    </div>
                     <div>
                         <div className="text-2xl font-bold mb-4">後端技能</div>
                         <div className="text-lg font-bold mb-1">Node</div>
@@ -27,7 +28,7 @@ export default function Skill() {
                         <div className="text-lg font-bold mb-1">GCP</div>
                     </div>
                 </div>
-                <div className=" flex gap-[8rem]">
+                <div className=" flex gap-20 lg:gap-[8rem]">
                     <div>
                         <div className="text-2xl font-bold mb-4">程式語言</div>
                         <div className="text-lg font-bold mb-1">Typescript</div>

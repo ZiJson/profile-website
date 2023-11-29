@@ -1,6 +1,6 @@
 export default function Contect() {
     return (
-        <div className="container mx-auto px-20 py-20 w-full h-full flex justify-between ">
+        <div className="container mx-auto px-10 lg:px-20 py-20 w-full h-full flex justify-between flex-col lg:flex-row gap-20 lg:gap-0">
             <div className="h-full flex flex-col gap-8  justify-end">
                 <a href="#about" className="text-6xl font-bold hover:text-gray-600">關於我</a>
                 <a href="#skills" className="text-6xl font-bold hover:text-gray-600">專長技能</a>
