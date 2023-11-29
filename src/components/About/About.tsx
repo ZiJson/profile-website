@@ -19,7 +19,7 @@ export default function About({ scrollY }: props) {
             </div>
             <div className="absolute w-[45rem] h-[40rem] opacity-20 bottom-6 right-0 group">
                 <motion.img style={{ y: y1 }} src={require('../../img/self.png')} alt="self" className="w-full h-full object-cover grayscale " />
-                <motion.div style={{ y: y2, x: "-50%" }} className="absolute w-[25rem] h-28 bg-black  top-[40%] left-[50%] ">
+                <motion.div style={{ y: y2, x: "-50%" }} className="absolute w-[25rem] h-28 bg-black  top-[15rem] left-[50%] ">
                 </motion.div>
             </div>
         </div>

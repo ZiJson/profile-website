@@ -92,7 +92,7 @@ export default function Works({scrollY}:props) {
                 <p>為您精選四個過去的開發專案</p>
                 <p>點擊以查看更詳細內容</p>
             </div>
-            <div className=" grid grid-cols-1 lg:grid-cols-2 mx-auto mb-[680px] lg:mb-0" style={{ width: container.width, height: container.height, columnGap: gap.y, rowGap: gap.x }}>
+            <div className=" grid grid-cols-1 lg:grid-cols-2 mx-auto lg:mx-0 mb-[680px] lg:mb-0" style={{ width: container.width, height: container.height, columnGap: gap.y, rowGap: gap.x }}>
                 {works.map((work, index) => {
                     const isSelected = work.position === motionState.selected;
                     return (
