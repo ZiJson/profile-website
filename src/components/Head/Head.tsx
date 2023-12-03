@@ -5,15 +5,16 @@ import { easeInOut, motion, MotionValue, useTransform } from 'framer-motion'
 // 1126.27 / 200
 type props = {
     scrollY: MotionValue<number>,
-    isNavBar?: boolean
+    isNavBar?: boolean,
+    isMobile?: boolean
 }
 
-export default function Head({ scrollY, isNavBar = false }: props) {
+export default function Head({ scrollY, isNavBar = false, isMobile = false }: props) {
     const [width, setWidth] = useState(window.innerWidth)
     window.addEventListener("resize", function () {
         setWidth(this.innerWidth)
     });
-    const height = !isNavBar?(width - 50) * 200 / 1126.27:20;
+    const height = !isNavBar ? (width - 50) * 200 / 1126.27 :!isMobile? 20:40;
     const start = (window.innerHeight * 0.3) - 108;
     const delay = 60
     const duration = 240
@@ -37,7 +38,7 @@ export default function Head({ scrollY, isNavBar = false }: props) {
     const y3 = useTransform(scrollY, range[2], [0, -height], { ease: easeInOut })
     const y4 = useTransform(scrollY, range[3], [0, -height], { ease: easeInOut })
     return (
-        <div className='flex scale-y-[1.8] origin-top w-full justify-center relative fill-[#222222] ' style={{height}}>
+        <div className='flex scale-y-[1.8] origin-top w-full justify-center relative fill-[#222222] ' style={{ height }}>
             <motion.div initial={initial} animate={animate} transition={{ ...transition, delay: 0.6 }} style={{ y: y4 }}>
                 <J height={height} />
             </motion.div>
@@ -70,9 +71,9 @@ export default function Head({ scrollY, isNavBar = false }: props) {
                 <N height={height} />
             </motion.div>
             {
-                !isNavBar?
-                <div className='w-full h-20 absolute top-[87%] z-10 bg-[#fafafa]'></div>
-                :null
+                !isNavBar ?
+                    <div className='w-full h-full absolute top-[87%] z-10 bg-[#fafafa]'></div>
+                    : null
             }
         </div>
     )

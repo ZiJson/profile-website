@@ -11,7 +11,6 @@ type props = {
 
 export default function Card({ isSelected, images, imgFolder }: props) {
     const [imageIndex, setImageIndex] = useState(0)
-    console.log(images[0] === "../../img/blog/blog.jpeg")
     // let img = require(images[0])
     useEffect(() => {
         if (!isSelected) {
@@ -19,7 +18,6 @@ export default function Card({ isSelected, images, imgFolder }: props) {
         }
     }, [isSelected])
 
-    console.log(isSelected)
     const onArrowClick = () => {
         if (imageIndex === images.length - 1) {
             setImageIndex(0)

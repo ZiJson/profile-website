@@ -10,7 +10,7 @@ export default function About({ scrollY }: props) {
     const y2 = useTransform(scrollY, [0, height, height * 2], [1500, 0, -1500])
 
     return (
-        <div className="container mx-auto px-20 py-20 w-full h-full flex flex-col justify-center items-start relative">
+        <div className="container mx-auto px-20 py-20 w-full min-h-screen flex flex-col justify-center items-start relative">
             <div className="w-fit">
                 <h1 className="">關於我</h1>
                 <p>桃園好男人</p>

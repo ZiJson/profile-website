@@ -17,13 +17,13 @@ type props = {
     scrollY: MotionValue<number>
 }
 
-export default function Works({scrollY}:props) {
+export default function Works({ scrollY }: props) {
 
-    useEffect(()=>{
-        scrollY.on("change",()=>{
+    useEffect(() => {
+        scrollY.on("change", () => {
             closeAll()
         })
-    },[])
+    }, [scrollY])
 
     const [motionState, setMotionState] = useState<MotionState>({
         selected: "",
@@ -86,13 +86,45 @@ export default function Works({scrollY}:props) {
     }
 
     return (
-        <div className="container mx-auto px-20 pr-8 py-20 w-full h-full flex justify-between items-center relative flex-col lg:flex-row gap-20 lg:gap-0 " onClick={onPageClick}>
+        <div className="container mx-auto  lg:px-20 lg:pr-8 py-20 w-full min-f-screen flex justify-between items-center relative flex-col lg:flex-row gap-40 lg:gap-0 " onClick={onPageClick}>
             <div>
                 <h1>開發作品</h1>
                 <p>為您精選四個過去的開發專案</p>
                 <p>點擊以查看更詳細內容</p>
             </div>
-            <div className=" grid grid-cols-1 lg:grid-cols-2 mx-auto lg:mx-0 mb-[680px] lg:mb-0" style={{ width: container.width, height: container.height, columnGap: gap.y, rowGap: gap.x }}>
+            <div className="flex flex-col gap-16 lg:hidden w-full ">
+                {
+                    works.map((work) => {
+                        return (
+                            <>
+                                <div className="border-[3px] border-gray-400 rounded-lg overflow-hidden">
+                                    <img src={require(`../../img/${work.folder}/${work.imgs[0]}`)} alt={work.title[0]} className=" w-full h-[30rem] object-cover " />
+                                </div>
+                                <div className="text-5xl flex items-center -my-10 justify-between">
+                                    <div className="text-4xl font-semibold">{work.title[1]}</div>
+                                    {
+                                        work.github !== '' ?
+                                            <a href={work.github}>
+                                                <GithubIcon />
+                                            </a>
+                                            : null
+                                    }
+                                </div>
+                                <div>
+                                    {work.content.map((text) => {
+                                        return (
+                                            <div className="text-[2rem] leading-normal text-gray-600 mb-4">
+                                                {text}
+                                            </div>
+                                        )
+                                    })}
+                                </div>
+                            </>
+                        )
+                    })
+                }
+            </div>
+            <div className="hidden lg:grid grid-cols-1 lg:grid-cols-2 mx-auto lg:mx-0 mb-[680px] lg:mb-0" style={{ width: container.width, height: container.height, columnGap: gap.y, rowGap: gap.x }}>
                 {works.map((work, index) => {
                     const isSelected = work.position === motionState.selected;
                     return (
@@ -101,7 +133,7 @@ export default function Works({scrollY}:props) {
                             animate={motionState[work.position]}
                             variants={cardVariants}
                             transition={{ type: "tween" }}
-                            whileHover={{scale:1.03}}
+                            whileHover={{ scale: 1.03 }}
                             className={`border border-[#222222] px-3 py-4 group relative hover:bg-white flex flex-col justify-between ${isSelected ? "hover:cursor-auto" : "hover:cursor-pointer"}`}
                             onClick={(e) => { onCardClick(e, work.position) }}
                             style={{ width: card.width, height: card.height }}
@@ -129,7 +161,7 @@ export default function Works({scrollY}:props) {
                                 ))}
                             </div>
                             {
-                                isSelected && work.github?
+                                isSelected && work.github ?
                                     <motion.a
                                         href={work.github}
                                         initial={{ opacity: 0, y: 20 }}
@@ -137,7 +169,7 @@ export default function Works({scrollY}:props) {
                                         className="hover:text-gray-400 absolute right-3 bottom-4 flex gap-2 text-gray-500 items-end"
                                     >
                                         <span className="text-md font-semibold ">see more</span>
-                                        <div  className="text-3xl ">
+                                        <div className="text-3xl ">
                                             <GithubIcon />
                                         </div>
                                     </motion.a>

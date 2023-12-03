@@ -1,13 +1,13 @@
 export default function Contect() {
     return (
-        <div className="container mx-auto px-10 lg:px-20 py-20 w-full h-full flex justify-between flex-col lg:flex-row gap-20 lg:gap-0">
-            <div className="h-full flex flex-col gap-8  justify-end">
+        <div className="container mx-auto px-10 lg:px-20 py-20 w-full min-h-[60vh] lg:min-h-screen flex justify-end lg:justify-between flex-col lg:flex-row gap-20 lg:gap-0 ">
+            <div className="h-full flex flex-col gap-8 self-start lg:self-end">
                 <a href="#about" className="text-6xl font-bold hover:text-gray-600">關於我</a>
                 <a href="#skills" className="text-6xl font-bold hover:text-gray-600">專長技能</a>
                 <a href="#works" className="text-6xl font-bold hover:text-gray-600">開發作品</a>
                 <a href="#contect" className="text-6xl font-bold hover:text-gray-600">聯絡資訊</a>
             </div>
-            <div className=" self-end  flex flex-col gap-3">
+            <div className="flex flex-col gap-3 self-end">
                 <div className="flex text-3xl fill-[#33333] gap-2 justify-end ">
                     <a href="mailto:jasonnosajya53@gmail.com" className="hover:fill-gray-600">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" x="0" y="0" viewBox="0 0 50 50">

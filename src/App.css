@@ -1,25 +1,25 @@
 p {
-  @apply font-bold tracking-wide text-[1.4rem] leading-normal ;
+  @apply font-bold tracking-wide text-5xl lg:text-[1.4rem] leading-normal ;
 }
 
 .top {
-  @apply font-black tracking-[0.15em] leading-normal text-4xl;
+  @apply font-black tracking-[0.15em] leading-normal text-7xl lg:text-4xl;
 }
 
 h1 {
-  @apply font-bold text-5xl leading-[2.5]
+  @apply font-bold text-8xl lg:text-5xl leading-[2.5]
 }
 
 strong {
-  @apply font-bold tracking-wide text-[1.4rem] leading-normal;
+  @apply font-bold tracking-wide text-5xl lg:text-[1.4rem] leading-normal;
   position: relative;
   display: inline-block;
   width: fit-content;
 }
 strong::before {
+  @apply lg:h-[12px] h-[20px];
   content: "";
   width: 100%;
-  height: 12px;
   display: inline-block;
   background-color: #f55e1a;
   position: absolute;
