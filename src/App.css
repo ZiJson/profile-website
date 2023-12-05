@@ -7,7 +7,7 @@ p {
 }
 
 h1 {
-  @apply font-bold text-8xl lg:text-5xl leading-[2.5]
+  @apply font-bold text-8xl lg:text-5xl lg:mb-7 leading-[2.5]
 }
 
 strong {
