@@ -1,9 +1,13 @@
 {
   "files": {
     "main.css": "/profile-website/static/css/main.6a67cda6.css",
-    "main.js": "/profile-website/static/js/main.8a706dde.js",
+    "main.js": "/profile-website/static/js/main.62bba44c.js",
     "static/js/787.e6fe0fcf.chunk.js": "/profile-website/static/js/787.e6fe0fcf.chunk.js",
     "static/media/self.png": "/profile-website/static/media/self.6ff3bcd05a8f437feb9f.png",
+    "static/media/3.png": "/profile-website/static/media/3.37216e2095eec49c9cf4.png",
+    "static/media/1.png": "/profile-website/static/media/1.60a1db99b6e8f2549855.png",
+    "static/media/2.png": "/profile-website/static/media/2.3a7ab6b004f0dcc01eea.png",
+    "static/media/4.png": "/profile-website/static/media/4.f3d5d7afdc4b924a8efd.png",
     "static/media/post.jpeg": "/profile-website/static/media/post.3fff13727fb49db95527.jpeg",
     "static/media/shop.jpeg": "/profile-website/static/media/shop.6be97f99cac3b9d87aeb.jpeg",
     "static/media/blog.jpeg": "/profile-website/static/media/blog.839d890433d32dc76f03.jpeg",
@@ -18,11 +22,11 @@
     "static/media/chatroom.jpeg": "/profile-website/static/media/chatroom.c269d6b8c098a62595b3.jpeg",
     "index.html": "/profile-website/index.html",
     "main.6a67cda6.css.map": "/profile-website/static/css/main.6a67cda6.css.map",
-    "main.8a706dde.js.map": "/profile-website/static/js/main.8a706dde.js.map",
+    "main.62bba44c.js.map": "/profile-website/static/js/main.62bba44c.js.map",
     "787.e6fe0fcf.chunk.js.map": "/profile-website/static/js/787.e6fe0fcf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6a67cda6.css",
-    "static/js/main.8a706dde.js"
+    "static/js/main.62bba44c.js"
   ]
 }
